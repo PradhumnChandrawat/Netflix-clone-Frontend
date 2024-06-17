@@ -1,0 +1,48 @@
+.card-container {
+  width: 12rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 1rem;
+  border: 2px solid white;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-container img {
+  width: 100%;
+  height: auto;
+  display: block; 
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-container:hover img {
+  opacity: 0.9;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-container:hover .card-overlay {
+  opacity: 1;
+}

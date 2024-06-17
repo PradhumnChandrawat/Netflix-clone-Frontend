@@ -1,0 +1,40 @@
+/* MovieList.css */
+.movie-list-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.movie-title {
+  font-size: 1.875rem; /* Equivalent to text-3xl */
+  padding-top: 0.75rem; /* Equivalent to py-3 */
+  padding-bottom: 0.75rem;
+}
+
+.movie-title-black {
+  color: black;
+}
+
+.movie-title-white {
+  color: white;
+}
+
+.movie-list-scroll {
+  display: flex;
+  overflow-x: auto;
+  cursor: pointer;
+}
+
+.movie-items {
+  display: flex;
+  align-items: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure scrollbar does not appear on all browsers */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

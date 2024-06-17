@@ -1,0 +1,8 @@
+.container-bg {
+  background-color: black;
+}
+
+.container-content {
+  position: relative;
+  z-index: 10;
+}
