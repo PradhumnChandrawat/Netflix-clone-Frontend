@@ -3,21 +3,28 @@ import useMovieById from "../hooks/useMovieById";
 import { useSelector } from "react-redux";
 
 const VideoBackground = ({ movieId }) => {
-  useMovieById(movieId);
+  useMovieById(movieId, true);
 
-  const movieTeaser = useSelector((store) => store.movie.Movieteaser);
+  const movieTrailer = useSelector((store) => store.movie.backgroundTeaser);
+
+  if (!movieTrailer || !movieTrailer.key) {
+    return <div>Loading trailer...</div>;
+  }
+
+  const iframeStyles = {
+    width: "100vw",
+    height: "100vh",
+    overflow: "hidden",
+  };
 
   return (
     <>
-      <div style={{ width: "100vw", overflow: "hidden" }}>
+      <div style={iframeStyles}>
         <iframe
-          style={{
-            width: "100vw",
-            height: "100vh",
-          }}
-          src={`https://www.youtube.com/embed/${movieTeaser.key}?si=xZjmegVgHhJDLW3B&autoplay=1&mute=1`}
+          style={iframeStyles}
+          src={`https://www.youtube.com/embed/${movieTrailer.key}?si=xZjmegVgHhJDLW3B&autoplay=1&mute=1`}
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       </div>
     </>

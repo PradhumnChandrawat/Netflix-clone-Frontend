@@ -9,6 +9,9 @@ const movieSlice = createSlice({
     upcomingMovies: null,
     toggle: false,
     Movieteaser: null,
+    backgroundTeaser: null,
+    open: false,
+    id: "",
   },
   reducers: {
     getNowPlayingMovies: (state, action) => {
@@ -29,6 +32,15 @@ const movieSlice = createSlice({
     getMovieTeaser: (state, action) => {
       state.Movieteaser = action.payload;
     },
+    getBackgroundTeaser: (state, action) => {
+      state.backgroundTeaser = action.payload;
+    },
+    setOpen: (state, action) => {
+      state.open = action.payload;
+    },
+    getId: (state, action) => {
+      state.id = action.payload;
+    },
   },
 });
 
@@ -39,5 +51,8 @@ export const {
   getUpcomingMovie,
   setToggle,
   getMovieTeaser,
+  getBackgroundTeaser,
+  setOpen,
+  getId,
 } = movieSlice.actions;
 export default movieSlice.reducer;

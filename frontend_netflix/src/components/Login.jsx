@@ -88,7 +88,7 @@ const Login = () => {
         <div className="fullscreen-banner">
           <img
             className="image-bg"
-            src="./assets/netflix-bg.png"
+            src="./assets/Netflix-Background.jpg"
             alt="background image"
           />
         </div>

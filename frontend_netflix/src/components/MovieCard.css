@@ -3,11 +3,11 @@
   padding-right: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
   margin-left: 1rem;
-  border: 2px solid white;
+  border: 0.5px solid white;
 }
 
 .card-container:hover {
@@ -18,7 +18,7 @@
 .card-container img {
   width: 100%;
   height: auto;
-  display: block; 
+  display: block;
   border-radius: 8px;
   transition: opacity 0.3s ease-in-out;
 }
@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   display: flex;
   align-items: flex-end;

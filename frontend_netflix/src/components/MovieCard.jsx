@@ -1,13 +1,23 @@
 import React from "react";
 import "./MovieCard.css";
 import { TMDB_IMG_Url } from "../utils/constant";
+import { useDispatch } from "react-redux";
+import { getId, setOpen } from "../redux/movieSlice";
 
-const MovieCard = ({ posterPath }) => {
+const MovieCard = ({ posterPath, Id }) => {
+  const dispatch = useDispatch();
+
+  if (posterPath === null) return null;
+
+  const handleOpen = () => {
+    dispatch(getId(Id));
+    dispatch(setOpen(true));
+  };
+
   return (
-    <div className="card-container">
+    <div className="card-container" onClick={handleOpen}>
       <img src={`${TMDB_IMG_Url}/${posterPath}`} alt="movie-banner" />
       <div className="card-overlay">
-        {/* Additional movie details or actions can go here */}
         <p>More Info</p>
       </div>
     </div>

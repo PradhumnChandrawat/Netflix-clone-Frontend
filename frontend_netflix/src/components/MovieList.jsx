@@ -1,6 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import "./MovieList.css"; // Import the CSS file
+import "./MovieList.css"; 
 
 const MovieList = ({ title, movies, searchMovie = false }) => {
   return (
@@ -18,6 +18,7 @@ const MovieList = ({ title, movies, searchMovie = false }) => {
             <MovieCard
               key={movie.id}
               movieId={movie.id}
+              Id={movie.id}
               posterPath={movie.poster_path}
             />
           ))}

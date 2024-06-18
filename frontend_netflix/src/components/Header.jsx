@@ -4,7 +4,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { API_END_POINT } from "../utils/constant";
-import { setUser } from "../redux/userSlice";
+import { clearUser } from "../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { setToggle } from "../redux/movieSlice";
@@ -22,7 +22,7 @@ const Header = () => {
       if (res.data.success) {
         toast.success(res.data.message);
       }
-      dispatch(setUser(null));
+      dispatch(clearUser()); // Clears user from Redux and localStorage
       navigate("/");
     } catch (error) {
       // console.log(error);
