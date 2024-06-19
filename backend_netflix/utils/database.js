@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export const dbConnection = () => {
   mongoose
     .connect(process.env.MONGODB_URI, {
-      dbName: "MERN_NETFLIX_CLONE",
+      dbName: "NETFLIX_DATABASE",
     })
     .then(() => {
       console.log("Database connection established successfully");

@@ -1,6 +1,9 @@
 import { User } from "../models/userModel.js";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const Login = async (req, res) => {
   try {
@@ -29,13 +32,17 @@ export const Login = async (req, res) => {
     const tokenData = {
       id: user._id,
     };
-    const token = await jwt.sign(tokenData, "secretjhhasgjhfkeyjsfck", {
+    const token = await jwt.sign(tokenData, process.env.JWT_SECRET_KEY, {
       expiresIn: "1h",
     });
 
     return res
       .status(200)
-      .cookie("token", token, { httpOnly: true })
+      .cookie("token", token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+      })
       .json({
         success: true,
         message: `Welcome back ${user.fullName}`,
@@ -50,7 +57,12 @@ export const Login = async (req, res) => {
 export const Logout = async (req, res) => {
   return res
     .status(200)
-    .cookie("token", "", { expiresIn: new Date(Date.now()), httpOnly: true })
+    .cookie("token", "", {
+      expiresIn: new Date(Date.now()),
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+    })
     .json({
       success: true,
       message: "User logged out successfully.",
