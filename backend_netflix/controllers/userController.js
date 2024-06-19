@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// Login api
 export const Login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -54,6 +55,7 @@ export const Login = async (req, res) => {
   }
 };
 
+// logout api
 export const Logout = async (req, res) => {
   return res
     .status(200)
@@ -69,6 +71,7 @@ export const Logout = async (req, res) => {
     });
 };
 
+// register api
 export const Register = async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
