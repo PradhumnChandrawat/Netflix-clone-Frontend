@@ -25,41 +25,55 @@ Installation
 Clone the repository
 
 # bash
-Copy code
-git clone https://github.com/yourusername/netflix-clone.git
+
+Copy code git clone: https://github.com/PradhumnChandrawat/Netflix-clone-Geekathon.git
+
 cd netflix-clone
+
 Install dependencies
 
 ## Frontend:
 
-bash
 Copy code
+
 cd frontend_netflix
+
 npm install
 
 ## Backend:
 
 bash
+
 Copy code
+
 cd backend_netflix
+
 npm install
+
 Set up environment variables
+
 
 Copy the .env.example file to .env and update the variables accordingly.
 
 ## Backend .env example:
 
 makefile
+
 Copy code
+
 PORT=5000
+
 MONGODB_URI=your_mongodb_connection_string
+
 JWT_SECRET_KEY=your_jwt_secret
 
 ## Frontend .env example:
 
 bash
 Copy code
+
 REACT_APP_API_URL=http://localhost:5000/api
+
 Run the application
 
 ## Backend:
