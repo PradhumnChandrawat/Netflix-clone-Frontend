@@ -1,17 +1,18 @@
 ## Netflix Clone
+
 This Netflix Clone is a full-stack application that mimics the core functionalities of the popular streaming service, Netflix. It features a dynamic user interface for browsing movies, user authentication, and the ability to search and watch movie trailers.
 
 ## Features
-# User Authentication: Secure login and registration system.
-# Browse Movies: Users can browse movies categorized as Now Playing, Popular, Top Rated, and Upcoming.
-# Movie Search: Search functionality to find movies.
-# Responsive Design: Adapts smoothly to various screen sizes.
+ User Authentication: Secure login and registration system.
+ Browse Movies: Users can browse movies categorized as Now Playing, Popular, Top Rated, and Upcoming.
+ Movie Search: Search functionality to find movies.
+ Responsive Design: Adapts smoothly to various screen sizes.
 
 ## Technologies
-# Frontend: React, Redux for state management, CSS for styling.
-# Backend: Node.js with Express, MongoDB for database, Mongoose for object data modeling.
-# Authentication: bcrypt.js for hashing passwords, JSON Web Tokens (JWT) for session management.
-# APIs: The Movie Database (TMDB) for movie data.
+ Frontend: React, Redux for state management, CSS for styling.
+ Backend: Node.js with Express, MongoDB for database, Mongoose for object data modeling.
+ Authentication: bcrypt.js for hashing passwords, JSON Web Tokens (JWT) for session management.
+ APIs: The Movie Database (TMDB) for movie data.
 
 ## Live Demo
 Visit the live demo at: https://keen-seahorse-bb8394.netlify.app/
